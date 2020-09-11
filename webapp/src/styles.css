@@ -1,0 +1,101 @@
+.container {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contract-header-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.contract-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.equation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.input-container {
+    margin: 5px;
+}
+
+input[type=number] {
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.symbol {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.label {
+    font-size: 18px;
+}
+
+.input {
+    border-radius: 5px;
+    padding: 5px;
+    border-width: 1px;
+    text-align: right;
+}
+
+.button {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.result {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px
+}
+
+.error-container {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 20px;
+}
+
+.error-header {
+    font-weight: bold;
+}
+
+.error {
+    margin-top: 5px;
+    font-family: monospace;
+}
