@@ -33,5 +33,8 @@ module.exports = {
         host: '0.0.0.0',
         sockPort: 443,
         allowedHosts: ['localhost', '.gitpod.io'],
+        proxy: {
+            '/v1': process.env.NODEOS_URL || 'http://localhost:8888'
+        }
     }
 };
