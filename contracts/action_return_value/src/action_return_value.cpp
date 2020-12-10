@@ -2,7 +2,7 @@
 
 using namespace eosio;
 
-class [[eosio::contract]] action_results : public contract {
+class [[eosio::contract]] action_return_value : public contract {
   public:
       using contract::contract;
 
