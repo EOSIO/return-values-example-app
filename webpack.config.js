@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
     mode: "development",
     devtool: "source-map",
@@ -9,11 +11,7 @@ module.exports = {
             {
                 test: /\.ts(x?)$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: "ts-loader"
-                    }
-                ]
+                loader: "ts-loader"
             },
             {
                 enforce: "pre",
@@ -23,11 +21,25 @@ module.exports = {
             },
             {
                 test: /\.css?$/,
-                loader: ['style-loader', 'css-loader']
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' }
+                ]
             }
         ],
     },
-
+    plugins: [
+        new webpack.ProvidePlugin({
+            Buffer: ["buffer", "Buffer"],
+        })
+    ],
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+        fallback: {
+            buffer: 'buffer',
+            crypto: 'crypto-browserify'
+        }
+    },
     devServer: {
         overlay: true,
         host: '0.0.0.0',
